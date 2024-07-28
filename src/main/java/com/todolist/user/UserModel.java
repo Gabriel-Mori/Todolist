@@ -33,5 +33,6 @@ public class UserModel implements Serializable {
     private String password;
 
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(name="created_at", unique=true)
     private LocalDateTime createdAt = LocalDateTime.now();
 }
